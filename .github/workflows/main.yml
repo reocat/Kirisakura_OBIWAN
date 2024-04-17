@@ -36,7 +36,8 @@ jobs:
         sudo apt-get update -y 
         sudo apt install gcc-aarch64-linux-gnu -y
         sudo apt install gcc-arm-linux-gnueabi -y
-        sudo apt install binutils make python3 libssl-dev build-essential bc  bison flex unzip libssl-dev ca-certificates xz-utils mkbootimg cpio device-tree-compiler git git-lfs -y
+        sudo apt install binutils make python3 libssl-dev build-essential bc  bison flex unzip libssl-dev lz4 ca-certificates xz-utils mkbootimg cpio device-tree-compiler git git-lfs -y
+        wget https://github.com/nathanchance/scripts/blob/master/bin/mkdtimg && install -m 755 mkdtimg /usr/bin
         git clone https://github.com/kdrag0n/proton-clang --dept=1 -b master
         git clone https://github.com/Coconutat/AnyKernel3_Backup -b Op6_KSU --depth=1
         rm -rf AnyKernel3/.git
